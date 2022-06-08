@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+/* font-family: 'Montserrat', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --colorPrincipal-: #242635;
+    --colorSecundario-: #d1ceca;
+    --colorAlterno1-: #34B0BE;
+    --colorAlterno2-: #ffffff;
+}
+
+body{
+    /* background-color: var(--colorPrincipal-  ); */
+    font-family: 'Montserrat', sans-serif; 
+    color: var(--colorSecundario-);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.25rem;
+    height: 50px;
+    gap: 1rem;
+    /* box-shadow: 0 10px 20px 10px #ddd; */
+}
+
+
+
+nav > label> img{
+    height: 45px;
+    width: 40px;
+    background-color: var(--colorPrincipal-);
+    border-radius: .5rem;
+}
+
+
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+input#menu-hamburguesa ~ ul{
+    background-color: var(--colorAlterno1-);
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 50%;
+    /* height: calc( 100vh - 60px ); */
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    display: none;
+    color: var( --colorAlterno2-);
+}
+
+input#menu-hamburguesa:checked ~ ul{
+    display: flex;
+}
+
+/* 
+.container-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+} */
+
+
+.circulo {
+     width: 300px;
+     height: 300px;
+     -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+     background: var(--colorSecundario-);
+     position: relative;
+     left: 155px;
+     
+     /* background-image: url(/assets/images/DSC_7042\ copia.jpg);
+     background-size: cover; */
+     }
+
+/* .foto1{
+    position: relative;
+    left: 25px;
+    top: 20px;
+} */
+
+     
+     .container-home, .foto1{
+         width: 250px;
+         height: 250px;
+         border-radius: 50%;
+              }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and ( min-width:640px ) {
+    label{
+        display: none;
+    }
+
+    input#menu-hamburguesa ~ ul{
+        position: static;
+        background-color: transparent;
+        display: flex;
+        flex-direction: row;
+        height: auto;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and ( min-width: 600px ) {
+    .contenedor{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .one{
+        flex-grow: 1;
+    }
+
+    .two{
+        flex-grow: 2;
+    }
+
+    .three{
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .one, 
+    .two{
+        flex-grow: 1;
+    }
+
+    .three{
+        width: auto;
+        flex-grow: 1;
+    }
+}

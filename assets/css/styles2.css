@@ -1,0 +1,323 @@
+/*  --- linea abajo
+h3 {
+  text-decoration-line: underline;
+  text-decoration-color: green;
+  text-decoration-thickness:10px;
+}*/
+
+                                                                                             /* configuraciones -  generales*/
+
+/* importacion de la fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/*asignacion variables de colores*/
+:root{
+    --colorPrincipal-: #242635;
+    --colorSecundario-: #c2bfbc;
+    --colorAlterno1-: #34B0BE;
+    --colorAlterno2-: #ffffff;
+    --colorFondo-: rgb(59, 58, 58);
+}
+
+/* ajustes generales-hoja de trabajo*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .text-center{
+    text-align: center;
+} */
+
+/*scroll slow*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*ajuste familia fuente*/
+body{
+   font-family: 'Montserrat', sans-serif;
+   background-color: var(--colorPrincipal-);
+}
+
+/*ajuste encabezado*/
+header{
+    background-color: var(--colorPrincipal-);
+    position: relative;
+    margin-bottom: 100px;
+}
+
+/*ajuste barra de navegacion*/
+nav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem 1.25rem;
+    height: 60px;
+    margin-bottom: 1.5rem;
+    font-size: 25px;
+    gap: 1.5rem;
+ }
+
+ /*ajuste  imagen barra de navegacion*/
+  nav >label> img{
+    width: 45px;
+    background-color:var(--colorFondo-);
+    border-radius: 5px;
+}
+
+/*ajuste visibilidad menu hamburguesa*/
+input#menu-hamburguesa{
+    visibility: hidden;
+}
+
+/*ajuste items barra de navegacion*/
+input#menu-hamburguesa ~ ul{
+    background-color: var(--colorSecundario-);
+    list-style: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: calc( 100vh - 60px );
+    top: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    display: none;
+    z-index: 100;
+     }
+
+/*ajuste boton seleccion menu hamburguesa*/
+ input#menu-hamburguesa:checked ~ ul{
+    display: flex;
+}
+/*--------------                           ---seccion---header*/
+
+.flotante2,
+.flotante1{
+    position: relative;
+    z-index: 1;
+    }
+
+.section-home{
+    position: relative;
+    color:var(--colorAlterno2-);
+    }
+
+.presentation-frank{
+     position: absolute;
+     left: 40px;
+     top: 25px;
+     z-index: 1;
+}
+.presentation-frank>h1{
+    font-size: 35px;
+}
+
+.nombre{
+    color: var(--colorAlterno1-);
+    font-size: 29px;
+}
+
+hr{
+   width: 189px;
+    height: 5px;
+    background-color: #ffffff;
+}
+
+.años-exp{
+    font-size: 30px;
+    position: absolute;
+    right: 55px;
+    top: 20px;
+}
+.años-exp>h5{
+    color: var(--colorAlterno1-);
+    font-size: 30px;
+}
+
+.log-sociales{
+display: inline-block;
+}
+
+.linkedin,
+.instagram,
+.twitter{
+    height: 50px;
+    width: 50px;
+    gap: 1.5rem;
+    background-color: #d1ceca;
+    border-radius: 50%;
+    padding: .5rem;
+}
+
+.imagen-perfil > img{
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    padding: 1.5rem 1.5rem;
+    background-color: var(--colorFondo-);
+    object-fit: contain;
+    position: relative;
+    left: 129px;
+    z-index: 0;
+}
+
+.logo-laborales{
+    display: flex;
+    justify-content: space-around;
+}
+
+ .elementos-laborales{
+   background-color: var(--colorFondo-);
+    border-radius: 15px;
+    padding: .5rem 2rem;
+  }
+
+.google,
+.amazon,
+.spotify{
+
+    height: 100px;
+    width: 100px;
+    gap: 15rem;
+    background-color: #a8a7a7;
+    border-radius: 20px;
+    padding: .5rem;
+    margin: 1px 10px;
+}
+
+/*-----------------------------------seccion acerca de mi*/
+
+.section{
+    padding: 0.5rem 2rem;
+     position: relative;
+}
+
+ .about-me{
+    position: absolute;
+    top: -100px;
+}
+
+.text-center{
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    color: var(--colorAlterno1-);
+}
+
+ .about-me >p{
+     padding: 1px 2rem 3px 1px;
+     text-align: justify;
+     right: 2px;
+     color: var(--colorSecundario-);
+ }
+
+/* seccion servicios*/
+    .section-estudios{
+        padding: 12rem 2rem .5rem 1rem;
+    }
+
+    .estudios-contenedor{
+    display:grid;
+    /*grid-template-rows: repeat(auto-fill,minmax(1.5rem,1fr));*/
+    grid-auto-flow: column;
+    overflow-x: auto;
+    grid-gap:.5rem;
+    grid-auto-columns: minmax(24rem,1fr);
+        }
+
+    .estudios-card{
+        height: 300px;
+        width: 300px;
+        text-align: center;
+        background-color: var(--colorSecundario-);
+        border-radius: 10px;
+        color:var(--colorFondo-);
+        padding: 1rem ;
+         }
+       
+        .pencil,
+        .phone,
+        .search{
+             font-size: 25px;
+             padding: .5rem;
+         }
+
+/* --------------seccion mis habilidades---*/
+     .contenedor-habilidades{
+         display: flex;
+         flex-direction: column;
+        align-items:flex-start;
+        gap: 1rem;
+       }
+
+     .habilidad{
+    font-size: 25px;
+    color: var(--colorSecundario-);
+    padding: 0 0 0 2rem;
+    }
+
+    .habilidad>progress{
+        width: 220px;
+        background-color:var(--colorSecundario-);
+         border-radius: .5rem;
+         padding: .5rem;
+          }
+
+/*---------  seccion mi portafolio---- */
+.galeria-proyectos{
+    display:grid;
+    grid-template-rows: repeat(auto-fill,minmax(10rem,1fr));
+    grid-auto-flow: column;
+    overflow-x: auto;
+    grid-gap:2rem;
+    grid-auto-columns: minmax(24rem,1fr);
+}
+
+.galeria-proyectos > img{
+    height:20rem;margin-bottom:.5rem;
+    border-radius: 5px;
+  }
+
+ /*-----seccion contacto*/
+ .contacto{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+}
+.contacto-card{
+    padding: 1rem;
+    text-align: center;
+    font-size: 25px;
+    color: var(--colorSecundario-);
+}
+.contacto-img{
+    background-color:var(--colorSecundario-);
+    width: 180px;
+    height: 180px;
+     border-radius: 1.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .75rem auto;
+    
+}
+.contacto-img>img{
+    width: 80px;
+    height: 80px;
+}
+
+/*-----------seccion footer--------*/
+footer{
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--colorFondo-);
+    color: var(--colorAlterno1-);
+}
+
+
+/*        media-- queries                          */
