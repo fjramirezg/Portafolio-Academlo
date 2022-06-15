@@ -50,7 +50,7 @@ nav{
     gap: 1.5rem;
  }
 
- a{
+ ul >a{
      text-decoration: none;
  }
 
@@ -101,10 +101,10 @@ input#menu-hamburguesa ~ ul{
     }
 
 .presentation-frank{
-   position: absolute;
-left: 15px;
-top: -35px;
-z-index: 1;
+    position: absolute;
+    left: 15px;
+    top: -35px;
+    z-index: 1;
 }
 
 .presentation-frank>h1{
